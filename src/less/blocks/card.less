@@ -1,0 +1,106 @@
+.card{
+  padding: 22px 20px 17px 20px;
+  border-bottom: 1px solid @secondaryBack-2;
+}
+
+.card__photo{
+  margin-bottom: 10px;
+}
+
+.card__text{
+  width: 280px;
+}
+
+.card__title{
+  .font(short; 14px; 24px; 700);
+}
+
+.card__author{
+  margin-bottom: 10px;
+  line-height: 24px;
+  text-transform: none;
+}
+
+.card__likes{
+  position: relative;
+  padding-left: 36px;
+  .font(short; 14px; 21px; 700);
+}
+
+.card__likes .icon-svg{
+  position: absolute;
+  bottom: 4px;
+  left: 0;
+  width: 23px;
+  height: 21px;
+  fill: #a3a3a3;
+}
+
+
+
+@media @tablet-width{
+  .card{
+    padding: 0;
+    border: none;
+    &:nth-of-type(3) .card__text{
+      background: @secondaryBack-3;
+    }
+  }
+
+  .card__photo{
+    width: 100%;
+    margin: 0;
+    line-height: 0;
+    img{
+      width: 100%;
+    }
+  }
+
+  .card__text{
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    padding: 16px 20px;
+    background: @secondaryBack;
+  }
+
+  .card__title{
+    width: 100%;
+  }
+
+  .card__author{
+    width: 100%;
+    margin: 0;
+  }
+
+  .card__likes{
+    position: absolute;
+    .align(vertical);
+    right: 20px;
+  }
+
+  .card__likes .icon-svg{
+    left: 5px;
+  }
+}
+
+
+
+@media @desktop-width{
+  .card{
+    &:nth-of-type(3) .card__text{
+      background: fade(@altBack-3, 30%);
+    }
+  }
+
+  .card__text{
+    margin-top: -80px;
+    background: fade(@altBack-3, 30%);
+    color: @primaryColor-2;
+  }
+
+  .card__likes .icon--like{
+    fill: @primaryBack;
+  }
+}

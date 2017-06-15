@@ -1,0 +1,175 @@
+.subcontent--map{
+  height: 350px;
+  background-color: @secondaryBack;
+  background-image: url("../img/bg-map-desktop@1x.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  @media @retina{
+    background-image: url("../img/bg-map-desktop@2x.jpg");
+  }
+}
+
+.subcontent--video{
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  width: 320px;
+  height: 306px;
+  margin: 0 auto;
+  padding-bottom: 105px;
+  background-origin: content-box;
+  background-image: url("../img/video-mobile@1x.jpg");
+  background-repeat: no-repeat;
+  background-position: bottom center;
+  background-size: cover;
+}
+
+.subcontent__userbar{
+  width: 280px;
+  height: 111px;
+  margin-bottom: -66px;
+}
+
+.subcontent__bar{
+  position: relative;
+  padding: 22px 23px 22px 22px;
+  height: 45px;
+  background: fade(@altBack-3, 60%);
+  &::before{
+    .def-pseudo();
+    width: 236px;
+    height: 3px;
+    background: fade(@primaryBack, 20%);
+  }
+}
+
+.subcontent__toggle{
+  position: absolute;
+  top: 19px;
+  left: 58px;
+  width: 9px;
+  height: 9px;
+  border-radius: 50%;
+  background: @primaryBack;
+  cursor: pointer;
+}
+
+.subcontent__controls{
+  display: flex;
+  padding: 23px 23px 23px 25px;
+  height: 66px;
+  background: @secondaryBack;
+}
+
+.subcontent__btn{
+  &--sub{
+    margin-left: auto;
+    margin-right: 31px;
+  }
+}
+
+.subcontent__controls .icon-svg{
+  background: @secondaryBack;
+  fill: #5A676F;
+  cursor: pointer;
+  transition: fill 0.3s linear;
+  &:hover{
+    fill: #333;
+  }
+  &:active{
+    fill: fade(#333, 30%);
+  }
+}
+
+
+
+@media @mobile-width-only{
+  .subcontent--video{
+    @media @retina{
+      background-image: url("../img/video-mobile@2x.jpg");
+    }
+  }
+}
+
+
+
+@media @tablet-width{
+  .subcontent--video{
+    width: 648px;
+    height: 540px;
+    padding-bottom: 40px;
+    background-image: url("../img/video-desktop@1x.jpg");
+    @media @retina{
+      background-image: url("../img/video-desktop@2x.jpg");
+    }
+  }
+
+  .subcontent__userbar{
+    position: relative;
+    width: 100%;
+    height: 93px;
+    margin: auto 0 0 0;
+  }
+
+  .subcontent__bar{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 93px;
+    padding: 45px 166px 45px 93px;
+    &::before{
+      width: 389px;
+    }
+  }
+
+  .subcontent__toggle{
+    top: 42px;
+    left: 120px;
+  }
+
+  .subcontent__controls{
+    position: relative;
+    z-index: 2;
+    align-items: center;
+    height: 93px;
+    padding: 0 40px;
+    background: transparent;
+  }
+
+  .subcontent__btn{
+    background: transparent;
+  }
+
+  .subcontent__controls .icon-svg{
+    background: transparent;
+    fill: @primaryBack;
+    &:hover{
+      fill: #333;
+    }
+    &:active{
+      fill: fade(#333, 90%);
+    }
+  }
+}
+
+
+
+@media @desktop-width{
+  .subcontent--video{
+    width: 800px;
+    height: 585px;
+    padding-bottom: 85px;
+  }
+
+  .subcontent__bar{
+    &::before{
+      width: 540px;
+    }
+  }
+
+  .subcontent__toggle{
+    left: 205px;
+  }
+}
