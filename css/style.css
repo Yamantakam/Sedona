@@ -1232,7 +1232,7 @@ sub {
     color: rgba(118, 99, 87, 0.3);
   }
   .welcome {
-    height: 518px;
+    height: 519px;
     background-image: url("../img/bg-back-desktop@1x.jpg");
   }
   .welcome::after {
@@ -1241,7 +1241,7 @@ sub {
   }
   .welcome--innerpage {
     height: 290px;
-    background-size: auto 518px;
+    background-size: auto 519px;
   }
   .welcome__content {
     width: 460px;
